@@ -1,0 +1,9 @@
+{% extends "education/header.html" %}
+{% block content %}
+	{% for education in object_list %}
+		<h5>  {{ education.institute }}</h5>
+		<p>{{ education.title }}</p>
+		<p>{{ education.cgpa }}</p>
+		<p>{{ education.year }}</p>
+	{% endfor %}
+{% endblock %}

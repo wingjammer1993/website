@@ -1,0 +1,11 @@
+{% extends "work/header.html" %}
+{% block content %}
+	{% for experience in object_list %}
+		<h5>  {{ experience.title }}</h5>
+	<div class="col-sm-8 offset-sm-2">
+		<p>{{ experience.institute }}</p>
+		<p>{{ experience.body }}</p>
+		<p>{{ experience.year }}</p>
+	</div>
+	{% endfor %}
+{% endblock %}

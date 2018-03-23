@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Amruta Rajopadhye</title>
+	<meta charset="utf-8" />
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'personal/css/bootstrap.min.css' %}" type = "text/css"/>
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+	
+	<style type="text/css">
+		html,
+		body {
+		  height:100%
+		}
+
+		.center {
+			display: block;
+			margin: 0 auto;
+		}
+
+		.img-circle {
+    		border-radius: 50%;
+		}
+
+		.box {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.color {
+			background-color: #FFFF99;
+		}
+
+		.bg-company {
+    		background-color: #ffffff;
+		}
+
+		@media (min-width: 992px){
+    	.nav_margin{
+        margin-left : 3em;
+        margin-right : 3em;
+    }
+}
+	</style>
+</head>
+
+<body class="body " style="background-color:#f6f6f6">
+	<div class="container-fluid color" style="min-height:95%; ">
+
+		<div class="col-sm-12">
+			    <br style="line-height: 1px" />
+				<img src="{% static 'personal/img/1.jpg' %}" class="responsive-img center img-circle" style='max-height:100px;' alt="My picture">
+			    <br style="line-height: 1px" />
+		</div>
+		<div class="row">
+		  	<div class="col-sm-12" >
+				<nav class="navbar navbar-expand-lg navbar-light bg-company">
+			  	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+			  	</button>
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup" >
+					<div class="navbar-nav mx-auto" >
+					  <a class="nav-item nav_margin nav-link active" href="">Home <span class="sr-only">(current)</span></a>
+					  <a class="nav-item nav_margin nav-link" href="work">Work</a>
+					  <a class="nav-item nav_margin nav-link" href="projects">Projects</a>
+					  <a class="nav-item nav_margin nav-link" href="education">Education</a>
+
+					</div>
+			    </div>
+				</nav>
+		    </div> <!--col-sm-2-->
+			<div class="col-sm-4">
+				<br><br/>
+				<img src="{% static 'personal/img/0.jpg' %}" class="responsive-img img-circle center" style='max-height:175px;' alt="My picture">
+			</div>
+			<div class="col-sm-6 box">
+				   {% block content %}
+
+				   {% endblock %}
+			</div>
+		</div>
+	</div>
+
+</body>
+
+</html>
+

@@ -1,0 +1,11 @@
+{% extends "projects/header.html" %}
+{% block content %}
+	{% for project in object_list %}
+		<h5>  {{ project.title }}</h5>
+	<div class="col-sm-8 offset-sm-2">
+		<p>{{ project.body }}</p>
+		<p>{{ project.year }}</p>
+	</div>
+
+	{% endfor %}
+{% endblock %}
