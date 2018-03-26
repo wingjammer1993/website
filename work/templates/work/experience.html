@@ -2,7 +2,7 @@
 {% block content %}
 	{% for experience in object_list %}
 	<div class="timeline-item" date-is='{{ experience.year }}'>
-		<h3>{{ experience.title }}</h3>
+		<h5>{{ experience.title }}</h5>
 		<p>{{ experience.institute }}</p>
 		<p>{{ experience.body }}</p>
 	</div>
